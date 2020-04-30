@@ -1,9 +1,17 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
+const routes = require("./routes");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  return res.send("Ola");
-});
+mongoose.connect(
+  "mongodb+srv://guimap01:cbm2exfw@omnistack-uc8oa.mongodb.net/omnistack9?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+app.use(express.json());
+app.use(routes);
 
 app.listen(3333);
