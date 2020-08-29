@@ -8,7 +8,7 @@ const routes = require("./routes");
 const app = express();
 
 mongoose.connect(
-  "mongodb+srv://guimap01:cbm2exfw@omnistack-uc8oa.mongodb.net/omnistack9?retryWrites=true&w=majority",
+  "mongodb+srv://@omnistack-uc8oa.mongodb.net/omnistack9?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
